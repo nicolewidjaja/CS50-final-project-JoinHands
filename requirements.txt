@@ -1,0 +1,4 @@
+Flask
+Flask-session
+cs50
+werkzeug.security

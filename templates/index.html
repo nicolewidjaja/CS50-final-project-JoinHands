@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <!-- events registered -->
+    <div>
+        <table class = "table">
+            <thead>
+                <tr>
+                    <th>Events Registered</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for event in events %}
+                <tr>
+                    <td>{{ event.name }}</td>
+                    <td>{{ event.date }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <!-- events posted progress -->
+     <div class="mt-5">
+        <table class = "table">
+            <thead>
+                <tr>
+                    <th>Events Posted</th>
+                    <th>Registered Usernames</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for post in posts %}
+                <tr>
+                    <td>{{ post.event_name }}</td>
+                    <td>{{ post.joined_username }}</td>
+                </tr>
+                {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

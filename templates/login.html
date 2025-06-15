@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <h1>Welcome to JoinHands</h1>
+    <form action="/login" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="password" placeholder="Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Log In</button>
+    </form>
+    <img class="border img-fluidc mt-5" src="https://mindfulmethodsforlife.com/wp-content/uploads/2024/06/How-Helping-Others-Helps-Us.jpg" alt="Helping Others" style="width: 300px;">
+{% endblock %}
